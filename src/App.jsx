@@ -1,12 +1,16 @@
 import React from "react";
-import Home from "./pages/home";
 
-import Chef from "./pages/Chef";
+import NavBar from "./component/navBar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <Home />
-    </>
+      <Router>
+        <NavBar></NavBar>
+        <Routes></Routes>
+      </Router>
+
+
   );
 }
 
