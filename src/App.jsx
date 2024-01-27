@@ -8,7 +8,7 @@ function App() {
       <Router>
         <NavBar></NavBar>
         <Routes>
-          <Route exact path="/" element={Home}></Route>
+          <Route exact path="/" Component={Home}></Route>
         </Routes>
       </Router>
     </>
