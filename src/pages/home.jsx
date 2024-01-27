@@ -7,6 +7,7 @@ import Chef from "./Chef";
 import FoodCard from "../components/FoodCard";
 import { Fragment } from "react";
 import SliderApi from "../components/SliderApi";
+import { CustumButtonFilled } from "../Custume Compnent/CustumElememt";
 
 function Home() {
   useEffect(() => {
@@ -27,6 +28,9 @@ function Home() {
             non beatae, enim expedita natus molestias optio nobis dolor possimus
             odio?
           </p>
+          <div className=" text-xs  w-[130px] sm:h-[25px]  flex mt-4 items-center md:h-[30px] md:w-[148px] md:text-base  ">
+            <CustumButtonFilled>Book Your Table</CustumButtonFilled>
+          </div>
         </div>
 
         <div className="w-1/3" data-aos="fade-left">
