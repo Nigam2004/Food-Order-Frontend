@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <footer class="bg-white">
+      <footer class="bg-white font-poppins ">
         <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8 ">
           <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
@@ -14,13 +14,13 @@ export default function Footer() {
                 non cupiditate quae nam molestias.
               </p>
 
-              <ul class="mt-8 flex gap-6">
+              <ul class="mt-8 flex gap-6 ">
                 <li>
                   <a
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75"
+                    class="text-orange-400 transition hover:opacity-75"
                   >
                     <span class="sr-only">Facebook</span>
 
@@ -44,7 +44,7 @@ export default function Footer() {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75"
+                    class="text-orange-400 transition hover:opacity-75"
                   >
                     <span class="sr-only">Instagram</span>
 
@@ -68,7 +68,7 @@ export default function Footer() {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75"
+                    class="text-orange-400 transition hover:opacity-75"
                   >
                     <span class="sr-only">Twitter</span>
 
@@ -88,7 +88,7 @@ export default function Footer() {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75"
+                    class="text-orange-400 transition hover:opacity-75"
                   >
                     <span class="sr-only">GitHub</span>
 
@@ -117,7 +117,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Home Delivery{" "}
@@ -127,7 +127,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       In-Dine Service{" "}
@@ -137,7 +137,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Party booking{" "}
@@ -147,7 +147,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Club & Bar facility{" "}
@@ -163,7 +163,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       About{" "}
@@ -173,7 +173,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Meet the Team{" "}
@@ -183,7 +183,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Accounts Review{" "}
@@ -199,7 +199,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Contact{" "}
@@ -209,7 +209,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       FAQs{" "}
@@ -219,7 +219,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Live Chat{" "}
@@ -235,7 +235,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Accessibility{" "}
@@ -245,7 +245,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Returns Policy{" "}
@@ -255,7 +255,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Refund Policy{" "}
@@ -265,7 +265,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75"
+                      class="text-orange-400 transition hover:opacity-75"
                     >
                       {" "}
                       Hiring Statistics{" "}
