@@ -7,26 +7,22 @@ const data = [
   {
     name: "Cheese Burger",
     img: img1,
-    review:
-      "Savor the irresistible blend of premium chicken, melted cheese, and our secret sauce in every bite with our signature Cheese Burger ",
+    review: " Lorem ipsum dolor sit amet consectetur adipisicing. ",
   },
   {
     name: "Chicken Biryani",
     img: img2,
-    review:
-      " Savor the exquisite blend of aromatic basmati rice, succulent chicken pieces, and a symphony of spices in our Chicken Biryani ",
+    review: "Lorem ipsum dolor sit amet consectetur adipisicing.",
   },
   {
     name: "Kadhai Paneer",
     img: img3,
-    review:
-      " Savor the exquisite blend of our secret Masala & Paneer Cubes, and a symphony of spices in our kadhai Paneer ",
+    review: "Lorem ipsum dolor sit amet consectetur adipisicing.",
   },
   {
     name: "Paneer Tikka",
     img: img4,
-    review:
-      "Savor the irresistible flavors of our renowned Paneer Tikka, a  masterpiece  taste buds with its perfectly grilled paneer cubes ",
+    review: "Lorem ipsum dolor sit amet consectetur adipisicing.",
   },
 ];
 
