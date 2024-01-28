@@ -1,13 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.slick-slide > div{
-    margin:0 10px
+.slick-slide > div {
+  margin: 0 10px;
 }
-body{
-    scroll-snap-type: none;
-    background: #f4f2f0;
-    
+body {
+  scroll-snap-type: none;
+  background: #f4f2f0;
+}
+
+.animation {
+  position: relative;
+}
+
+.animation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background-color: orange;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+
+  transition: 0.3s ease-in-out;
+  transform: scale(0);
+}
+.animation:hover::after {
+  transform: scale(1);
+  border-radius: 50%;
 }

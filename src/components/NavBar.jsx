@@ -29,8 +29,8 @@ function NavBar() {
       >
         {Links.map((item) => {
           return (
-            <li className="py-2" key={item.id}>
-              {item.name}
+            <li className="py-2 animation cursor-pointer" key={item.id}>
+              <NavLink>{item.name}</NavLink>
             </li>
           );
         })}
