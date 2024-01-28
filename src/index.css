@@ -31,3 +31,10 @@ body {
   transform: scale(1);
   border-radius: 50%;
 }
+.active {
+  color: orange;
+}
+.slick-prev {
+  background-color: orange;
+  border-radius: 50%;
+}

@@ -1,5 +1,10 @@
 import React from "react";
 import Home from "./pages/home";
+import Menu from "./pages/Menu";
+import Reservation from "./pages/Reservation";
+import Blog from "./pages/Blog";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -10,8 +15,12 @@ function App() {
         <NavBar></NavBar>
         <Routes>
           <Route exact path="/" Component={Home}></Route>
+          <Route path="/menu" Component={Menu}></Route>
+          <Route path="/reservation" Component={Reservation}></Route>
+          <Route path="/blog" Component={Blog}></Route>
+          <Route path="/aboutus" Component={AboutUs}></Route>
+          <Route path="/contactus" Component={ContactUs}></Route>
         </Routes>
-        <Footer></Footer>
       </Router>
     </>
   );

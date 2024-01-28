@@ -28,11 +28,8 @@ function Home() {
             non beatae, enim expedita natus molestias optio nobis dolor possimus
             odio?
           </p>
-          <div className=" text-xs  w-[130px] sm:h-[25px]  flex mt-4 items-center md:h-[30px] md:w-[148px] md:text-base  ">
-            <CustumButtonFilled>Book Your Table</CustumButtonFilled>
-          </div>
+          <CustumButtonFilled>Book Your Table</CustumButtonFilled>
         </div>
-
         <div className="w-1/3" data-aos="fade-left">
           <img
             src={img1}
@@ -49,7 +46,7 @@ function Home() {
           {SliderApi.map((data, index) => {
             return (
               <Fragment key={index}>
-                <FoodCard data={data}></FoodCard>;
+                <FoodCard data={data}></FoodCard>
               </Fragment>
             );
           })}
