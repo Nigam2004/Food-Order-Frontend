@@ -20,13 +20,14 @@ function Home() {
     <Container>
       <div className="container  mx-auto flex items-center justify-between h-[350px] gap-[1rem] md:gap-10 md:h-[450px] lg:h-[750px] ">
         <div className="w-2/3  p-6" data-aos="fade-right">
-          <h1 className=" text-base font-poppins font-bold mb-2 ">
+          <h1 className=" text-xs font-poppins font-bold mb-2 md:text-xl ">
             Welcome to 🍔
           </h1>
-          <p className=" text-base font-poppins font-bold mb-4 md:text-2xl lg:text-4xl">
-            The Broccoli Resturant <br />& Enjoy The Food
+          <p className=" text-[0.8rem] font-poppins font-bold mb-4 md:text-2xl lg:text-4xl">
+            The Broccoli Resturant 🍽️
+            <br /> & Enjoy The Food
           </p>
-          <p className=" text-xs font-poppins mb-2 text-justify md:text-xl lg:text-2xl ">
+          <p className=" text-[0.5rem] text left font-poppins mb-2 md:text-justify md:text-xl lg:text-2xl ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
             non beatae, enim expedita natus molestias optio nobis dolor possimus
             odio?

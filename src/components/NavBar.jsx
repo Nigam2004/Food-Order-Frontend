@@ -20,11 +20,11 @@ function NavBar() {
   ];
   return (
     <div className=" w-full min-w-60 fixed  flex justify-between items-center px-7 py-2 bg-white z-20">
-      <div>Logoo</div>
+      <div className="font-poppins font-bold">Broccoli</div>
 
       <ul
         className={`sm:flex pl-8 sm:pl-0 sm:items-center sm:pb-0  absolute  sm:static sm:gap-4 
-        sm:z-auto  z-[-1] sm: left-0  sm:w-auto  font-semibold text-gray-600 
+        sm:z-auto  z-[-1] sm: left-0  sm:w-auto font-poppins font-semibold text-gray-600 
         w-full  transition-all duration-700 ease-in ${
           isOpen ? "top-[50px]" : "top-[-250px]"
         }
