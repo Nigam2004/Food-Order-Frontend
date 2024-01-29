@@ -7,14 +7,17 @@ import Chef from "./Chef";
 import FoodCard from "../components/FoodCard";
 import { Fragment } from "react";
 import SliderApi from "../components/SliderApi";
-import { CustumButtonFilled } from "../Custume Compnent/CustumElememt";
+import {
+  Container,
+  CustumButtonFilled,
+} from "../Custume Compnent/CustumElememt";
 
 function Home() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <>
+    <Container>
       <div className="container  mx-auto flex items-center justify-between h-[350px] gap-[1rem] md:gap-10 md:h-[450px] lg:h-[750px] ">
         <div className="w-2/3  p-6" data-aos="fade-right">
           <h1 className=" text-base font-poppins font-bold mb-2 ">
@@ -53,7 +56,7 @@ function Home() {
         </Carousel>
       </div>
       <Chef></Chef>
-    </>
+    </Container>
   );
 }
 

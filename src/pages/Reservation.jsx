@@ -1,10 +1,11 @@
 import React from "react";
+import { Container } from "../Custume Compnent/CustumElememt";
 
 function Reservation() {
   return (
-    <div>
+    <Container>
       <h1>reservation</h1>
-    </div>
+    </Container>
   );
 }
 

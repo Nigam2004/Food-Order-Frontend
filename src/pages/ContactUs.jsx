@@ -1,10 +1,11 @@
 import React from "react";
+import { Container } from "../Custume Compnent/CustumElememt";
 
 function ContactUs() {
   return (
-    <div>
-      <h1>Contact</h1>
-    </div>
+    <Container>
+      <h1>contact</h1>
+    </Container>
   );
 }
 

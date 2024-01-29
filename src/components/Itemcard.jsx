@@ -3,7 +3,7 @@ import { CustomButtonOutline } from "../Custume Compnent/CustumElememt";
 
 function Itemcard() {
   return (
-    <div className="bg-white text-black rounded-xl cursor-pointer duration-500 hover:shadow-xl w-80">
+    <div className="bg-white text-black rounded-xl cursor-pointer duration-500 hover:shadow-xl min-w-60 sm:w-80">
       <div className=" p-3 bg-[#eee8d7] rounded-lg flex justify-center items-center  ">
         <img
           src="src/assets/Burger.png"

@@ -1,10 +1,11 @@
 import React from "react";
+import { Container } from "../Custume Compnent/CustumElememt";
 
 function Blog() {
   return (
-    <div>
+    <Container>
       <h1>blog</h1>
-    </div>
+    </Container>
   );
 }
 

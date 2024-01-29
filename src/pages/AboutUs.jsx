@@ -1,10 +1,11 @@
 import React from "react";
+import { Container } from "../Custume Compnent/CustumElememt";
 
 function AboutUs() {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <Container>
+      <h1>aboutuss</h1>
+    </Container>
   );
 }
 

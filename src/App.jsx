@@ -21,6 +21,7 @@ function App() {
           <Route path="/aboutus" Component={AboutUs}></Route>
           <Route path="/contactus" Component={ContactUs}></Route>
         </Routes>
+        {/* <Footer></Footer> */}
       </Router>
     </>
   );

@@ -19,18 +19,26 @@ function NavBar() {
     { name: "Contact Us", path: "/contactus", id: 6 },
   ];
   return (
-    <div className="  flex justify-between items-center px-7 py-2 ">
+    <div className=" w-full min-w-60 fixed  flex justify-between items-center px-7 py-2 bg-white z-20">
       <div>Logoo</div>
 
       <ul
         className={`sm:flex pl-8 sm:pl-0 sm:items-center sm:pb-0  absolute  sm:static sm:gap-4 
-        sm:z-auto  z-[-1] sm: left-0  sm:w-auto transition-all font-semibold text-gray-600 
-        w-full   duration-700 ease-in ${isOpen ? "top-[76px]" : "top-[-130px]"}
-             `}
+        sm:z-auto  z-[-1] sm: left-0  sm:w-auto  font-semibold text-gray-600 
+        w-full  transition-all duration-700 ease-in ${
+          isOpen ? "top-[50px]" : "top-[-250px]"
+        }
+         bg-white    `}
       >
         {Links.map((item) => {
           return (
-            <li className="py-2 animation cursor-pointer" key={item.id}>
+            <li
+              className="py-2 animation cursor-pointer"
+              key={item.id}
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
               <NavLink to={item.path}>{item.name}</NavLink>
             </li>
           );
@@ -44,10 +52,13 @@ function NavBar() {
           </span>
           <IoCartOutline className="h-7 w-7 " />
         </div>
-        <CustumButtonFilled>Login</CustumButtonFilled>
-        <CustomButtonOutline>SignUp</CustomButtonOutline>
+        <div className="sm:flex gap-3 hidden">
+          <CustumButtonFilled>Login</CustumButtonFilled>
+          <CustomButtonOutline isClicked={false}>SignUp</CustomButtonOutline>
+        </div>
+
         <div
-          className="sm:hidden"
+          className="sm:hidden overflow-auto"
           onClick={() => {
             setIsOpen(!isOpen);
           }}
