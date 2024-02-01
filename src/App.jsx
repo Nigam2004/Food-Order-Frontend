@@ -5,7 +5,6 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-// import Booking from "./components/Booking";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (

@@ -7,6 +7,7 @@ import Chef from "./Chef";
 import FoodCard from "../components/FoodCard";
 import { Fragment } from "react";
 import SliderApi from "../components/SliderApi";
+import { Link } from "react-router-dom";
 import {
   Container,
   CustumButtonFilled,
@@ -32,7 +33,9 @@ function Home() {
             non beatae, enim expedita natus molestias optio nobis dolor possimus
             odio?
           </p>
-          <CustumButtonFilled>Book Your Table</CustumButtonFilled>
+          <Link to="/contactus">
+            <CustumButtonFilled>Book Your Table</CustumButtonFilled>
+          </Link>
         </div>
         <div className="w-1/3" data-aos="fade-left">
           <img
