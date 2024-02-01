@@ -8,7 +8,7 @@ import { TbPaperBag } from "react-icons/tb";
 export default function Chef() {
   return (
     <>
-      <div className="container  mx-auto  flex flex-col items-center justify-around md:flex-row  h-[400px] gap-[1rem] md:gap-5 md:h-[450px] lg:h-[650px]  ">
+      <div className="container  mx-auto  flex flex-col items-center justify-around md:flex-row  h-[400px] gap-[1rem] md:gap-5 md:h-[500px] lg:h-[650px]  ">
         <div className="left w-2/3 p-6">
           <div>
             <img src={chef} alt="chef" />

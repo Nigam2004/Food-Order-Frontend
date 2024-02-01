@@ -13,10 +13,8 @@ function NavBar() {
   const Links = [
     { name: "Home", path: "/", id: "1" },
     { name: "Menu", path: "/menu", id: "2" },
-    { name: "Reservation", path: "/reservation", id: "3" },
-    { name: "Blog", path: "/blog", id: 4 },
-    { name: "About Us", path: "/aboutus", id: 5 },
-    { name: "Contact Us", path: "/contactus", id: 6 },
+    { name: "About Us", path: "/aboutus", id: "3" },
+    { name: "Contact Us", path: "/contactus", id: "4" },
   ];
   return (
     <div className=" w-full min-w-60 fixed  flex justify-between items-center px-7 py-2 bg-white z-20">
