@@ -59,7 +59,7 @@ function Menu() {
           })}
         </div>
       </div>
-      {/* <Itemcard></Itemcard> */}
+      <Itemcard></Itemcard>
     </Container>
   );
 }

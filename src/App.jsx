@@ -5,7 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import Booking from "./components/Booking";
+// import Booking from "./components/Booking";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -18,7 +18,6 @@ function App() {
           <Route path="/aboutus" Component={AboutUs}></Route>
           <Route path="/contactus" Component={ContactUs}></Route>
         </Routes>
-        <Booking></Booking>
         <Footer></Footer>
       </Router>
     </>
