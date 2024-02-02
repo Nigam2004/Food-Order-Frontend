@@ -6,7 +6,7 @@ function Itemcard() {
     <div className="bg-white text-black rounded-xl cursor-pointer duration-500 hover:shadow-xl min-w-60 sm:w-80">
       <div className=" p-3 bg-[#eee8d7] rounded-lg flex justify-center items-center  ">
         <img
-          src="src/assets/Burger.png"
+          src="https://res.cloudinary.com/dbgmzkuuh/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1706701047/imvdczegssqnnpf8gtf3.jpg"
           alt="burger"
           className="h-44 w-44 rounded-full"
         />
