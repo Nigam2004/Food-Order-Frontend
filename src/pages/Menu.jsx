@@ -6,6 +6,7 @@ import {
 } from "../Custume Compnent/CustumElememt";
 
 import axios from "axios";
+import Skeleten from "../components/Skeleten";
 
 function Menu() {
   const menus = [
@@ -60,6 +61,7 @@ function Menu() {
         </div>
       </div>
       <Itemcard></Itemcard>
+      <Skeleten></Skeleten>
     </Container>
   );
 }
