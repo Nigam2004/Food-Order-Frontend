@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   CustumButtonFilled,
   CustomButtonOutline,
@@ -7,8 +7,10 @@ import { AiOutlineMenu, AiFillHome, AiOutlineClose } from "react-icons/ai";
 // import { FaShoppingCart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
+import { Cart } from "../../Context";
 
 function NavBar() {
+  const { cart, setCart } = useContext(Cart);
   let [isOpen, setIsOpen] = useState(false);
   const Links = [
     { name: "Home", path: "/", id: "1" },
@@ -44,12 +46,14 @@ function NavBar() {
       </ul>
 
       <div className="flex gap-4 items-center justify-center">
-        <div className="relative cursor-pointer">
-          <span className="bg-yellow-100 w-3 h-3 rounded-lg text-[10px] font-bold text-gray-600 absolute right-0 z-10 flex items-center justify-center p-1 ">
-            2
-          </span>
-          <IoCartOutline className="h-7 w-7 " />
-        </div>
+        <Link to="/cart">
+          <div className="relative cursor-pointer">
+            <span className="bg-yellow-100 w-3 h-3 rounded-lg text-[10px] font-bold text-gray-600 absolute right-0 z-10 flex items-center justify-center p-1 ">
+              {cart.length}
+            </span>
+            <IoCartOutline className="h-7 w-7 " />
+          </div>
+        </Link>
         <div className="sm:flex gap-3 hidden">
           <CustumButtonFilled>Login</CustumButtonFilled>
           <CustomButtonOutline isClicked={false}>SignUp</CustomButtonOutline>

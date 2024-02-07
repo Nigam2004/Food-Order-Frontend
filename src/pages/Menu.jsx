@@ -5,7 +5,7 @@ import {
   CustomButtonOutline,
 } from "../Custume Compnent/CustumElememt";
 
-import axios from "axios";
+import { foods } from "../../MockData";
 
 function Menu() {
   const menus = [
@@ -16,24 +16,6 @@ function Menu() {
     { name: "Desert" },
   ];
   const [clicked, setClicked] = useState("");
-
-  // const fetchGet = async () => {
-  //   const options = {
-  //     method: "GET",
-  //     url: "https://restaurants222.p.rapidapi.com/currencies",
-  //     headers: {
-  //       "X-RapidAPI-Key": "SIGN-UP-FOR-KEY",
-  //       "X-RapidAPI-Host": "restaurants222.p.rapidapi.com",
-  //     },
-  //   };
-
-  //   try {
-  //     const response = await axios.request(options);
-  //     console.log(response.data);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
 
   return (
     <Container>
@@ -59,7 +41,11 @@ function Menu() {
           })}
         </div>
       </div>
-      <Itemcard></Itemcard>
+      <div className="grid grid-rows-1">
+        {foods.map((item, index) => {
+          return <Itemcard item={item} key={index}></Itemcard>;
+        })}
+      </div>
     </Container>
   );
 }

@@ -6,17 +6,22 @@ import ContactUs from "./pages/ContactUs";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Context from "../Context";
+import CartPage from "./pages/CartPage";
 function App() {
   return (
     <>
       <Router>
-        <NavBar></NavBar>
-        <Routes>
-          <Route exact path="/" Component={Home}></Route>
-          <Route path="/menu" Component={Menu}></Route>
-          <Route path="/aboutus" Component={AboutUs}></Route>
-          <Route path="/contactus" Component={ContactUs}></Route>
-        </Routes>
+        <Context>
+          <NavBar></NavBar>
+          <Routes>
+            <Route exact path="/" Component={Home}></Route>
+            <Route path="/menu" Component={Menu}></Route>
+            <Route path="/aboutus" Component={AboutUs}></Route>
+            <Route path="/contactus" Component={ContactUs}></Route>
+            <Route path="/cart" Component={CartPage}></Route>
+          </Routes>
+        </Context>
         <Footer></Footer>
       </Router>
     </>
