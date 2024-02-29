@@ -8,7 +8,9 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Context from "../Context";
 import CartPage from "./pages/CartPage";
+
 import PrivateRoutes from "./utils/PrivateRoutes";
+
 function App() {
   return (
     <>
@@ -16,6 +18,7 @@ function App() {
         <Context>
           <NavBar></NavBar>
           <Routes>
+
             <Route exact path="/" element={<Home></Home>}></Route>
             <Route
               path="/menu"
@@ -49,6 +52,7 @@ function App() {
                 </PrivateRoutes>
               }
             ></Route>
+
           </Routes>
         </Context>
         <Footer></Footer>
