@@ -8,9 +8,9 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Context from "../Context";
 import CartPage from "./pages/CartPage";
-import SignUp from "./components/SignUp";
-import Login from "./components/Login";
-import Forget from "./components/Forget";
+
+import PrivateRoutes from "./utils/PrivateRoutes";
+
 function App() {
   return (
     <>
@@ -18,14 +18,41 @@ function App() {
         <Context>
           <NavBar></NavBar>
           <Routes>
-            <Route exact path="/" Component={Home}></Route>
-            <Route path="/menu" Component={Menu}></Route>
-            <Route path="/aboutus" Component={AboutUs}></Route>
-            <Route path="/contactus" Component={ContactUs}></Route>
-            <Route path="/cart" Component={CartPage}></Route>
-            <Route path="/signup" Component={SignUp}></Route>
-            <Route path="/login" Component={Login}></Route>
-            <Route path="/login/forget" Component={Forget}></Route>
+
+            <Route exact path="/" element={<Home></Home>}></Route>
+            <Route
+              path="/menu"
+              element={
+                <PrivateRoutes>
+                  <Menu />
+                </PrivateRoutes>
+              }
+            ></Route>
+            <Route
+              path="/aboutus"
+              element={
+                <PrivateRoutes>
+                  <AboutUs />
+                </PrivateRoutes>
+              }
+            ></Route>
+            <Route
+              path="/contactus"
+              element={
+                <PrivateRoutes>
+                  <ContactUs />
+                </PrivateRoutes>
+              }
+            ></Route>
+            <Route
+              path="/cart"
+              element={
+                <PrivateRoutes>
+                  <CartPage />
+                </PrivateRoutes>
+              }
+            ></Route>
+
           </Routes>
         </Context>
         <Footer></Footer>
