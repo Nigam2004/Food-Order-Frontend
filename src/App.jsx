@@ -8,6 +8,9 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Context from "../Context";
 import CartPage from "./pages/CartPage";
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
+import Forget from "./components/Forget";
 function App() {
   return (
     <>
@@ -20,6 +23,9 @@ function App() {
             <Route path="/aboutus" Component={AboutUs}></Route>
             <Route path="/contactus" Component={ContactUs}></Route>
             <Route path="/cart" Component={CartPage}></Route>
+            <Route path="/signup" Component={SignUp}></Route>
+            <Route path="/login" Component={Login}></Route>
+            <Route path="/login/forget" Component={Forget}></Route>
           </Routes>
         </Context>
         <Footer></Footer>
