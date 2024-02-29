@@ -19,9 +19,17 @@ function Menu() {
 
   return (
     <Container>
-      <div className="flex justify-between items-center px-5">
-        <h1>Order Your Menu</h1>
-        <div className="flex justify-center items-center gap-3 flex-wrap">
+      <div className="md:flex justify-between items-center px-5 py-2 fixed sm:static bg-white flex-wrap">
+        <div className="flex justify-center ">
+          <input
+            type="text"
+            placeholder="Search Here"
+            // value={searchMovie}
+            // onChange={(e) => setSearchMovie(e.target.value)}
+            className="h-[35px] w-2/3 md:w-full  outline-none border-orange-400 border-2 rounded-md px-5 shadow-lg"
+          />
+        </div>
+        <div className="flex justify-center items-center gap-3 flex-wrap mt-2 md:m-0">
           {menus.map((item, index) => {
             return (
               <div
@@ -41,7 +49,11 @@ function Menu() {
           })}
         </div>
       </div>
-      <div className="grid grid-rows-1">
+
+      <div
+        className="grid grid-rows-1 pt-36 sm:pt-24 md:pt-2
+        "
+      >
         {foods.map((item, index) => {
           return <Itemcard item={item} key={index}></Itemcard>;
         })}
