@@ -8,7 +8,9 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Context from "../Context";
 import CartPage from "./pages/CartPage";
-
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import Forget from "./components/Forget";
 import PrivateRoutes from "./utils/PrivateRoutes";
 
 function App() {
@@ -18,8 +20,10 @@ function App() {
         <Context>
           <NavBar></NavBar>
           <Routes>
-
             <Route exact path="/" element={<Home></Home>}></Route>
+            <Route path="/login" exact element={<Login></Login>}></Route>
+            <Route path="/login/forget" element={<Forget />}></Route>
+            <Route path="/signup" element={<SignUp></SignUp>}></Route>
             <Route
               path="/menu"
               element={
@@ -52,10 +56,9 @@ function App() {
                 </PrivateRoutes>
               }
             ></Route>
-
           </Routes>
         </Context>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </Router>
     </>
   );

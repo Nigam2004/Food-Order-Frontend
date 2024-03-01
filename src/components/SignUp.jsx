@@ -2,15 +2,18 @@ import React from "react";
 import login from "../assets/Login.jpg";
 import { NavLink } from "react-router-dom";
 
-export default function Login() {
+export default function SignUp() {
   return (
     <>
-      <div className="min-h-screen bg-gray-400 ">
+      <div className="min-h-screen rounded-md ">
         <div className="mx-auto ">
           <div className="flex items-center justify-center px-6 py-[9rem]">
-            <div className="w-full xl:w-3/4 lg:w-11/12 flex">
-              <div className="w-full h-auto bg-white  hidden lg:block lg:w-5/12 bg-cover rounded-l-lg">
-                <img src={login} alt="" />
+            <div
+              className="w-full xl:w-3/4 lg:w-11/12 flex border-t-4 shadow-2xl shadow-orange-500 border-orange-500 rounded-md"
+              data-aos="zoom-in-up"
+            >
+              <div className="w-full h-auto bg-white  hidden lg:block lg:w-5/12 bg-cover rounded-md">
+                <img src={login} alt="" className="rounded-md" />
               </div>
               <div className="w-full lg:w-7/12 bg-white  p-5 rounded-lg lg:rounded-l-none">
                 <h3 className="py-4 text-2xl text-center text-gray-800 ">
@@ -93,7 +96,7 @@ export default function Login() {
                   </div>
                   <div className="mb-6 text-center">
                     <button
-                      className="w-full px-4 py-2 font-bold text-white bg-orange-400 rounded-full hover:bg-orange-700  focus:outline-none focus:shadow-outline"
+                      className="w-full px-4 py-2 font-bold text-white bg-orange-400 duration-300 rounded-full hover:bg-orange-700  focus:outline-none focus:shadow-outline"
                       type="button"
                     >
                       Register Account

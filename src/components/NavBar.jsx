@@ -19,14 +19,14 @@ function NavBar() {
     { name: "About Us", path: "/aboutus", id: "3", display: "block" },
     { name: "Contact Us", path: "/contactus", id: "4", display: "block" },
     { name: "Login", path: "/login", id: "5", display: "hidden" },
-    { name: "SignUp", path: "/signUp", id: "6", display: "hidden" },
+    { name: "SignUp", path: "/signup", id: "6", display: "hidden" },
   ];
   return (
     <div className=" w-full min-w-60 fixed  flex justify-between items-center px-7 py-2 bg-white z-20">
       <div className="font-poppins font-bold">Broccoli</div>
 
       <ul
-        className={`sm:flex pl-8 sm:pl-0 sm:items-center sm:pb-0  absolute  sm:static sm:gap-4 
+        className={`sm:flex pl-8 sm:pl-0 sm:items-center sm:pb-0  absolute  sm:static sm:gap-8 
         sm:z-auto  z-[-1] sm: left-0  sm:w-auto font-poppins font-semibold text-gray-600 
         w-full  transition-all duration-700 ease-in ${
           isOpen ? "top-[50px]" : "top-[-250px]"
@@ -68,8 +68,14 @@ function NavBar() {
           <Profile />
         ) : (
           <div className="sm:flex gap-3 hidden">
-            <CustumButtonFilled>Login</CustumButtonFilled>
-            <CustomButtonOutline isClicked={false}>SignUp</CustomButtonOutline>
+            <Link to="/login">
+              <CustumButtonFilled>Login</CustumButtonFilled>
+            </Link>
+            <Link to="/signup">
+              <CustomButtonOutline isClicked={false}>
+                SignUp
+              </CustomButtonOutline>
+            </Link>
           </div>
         )}
 

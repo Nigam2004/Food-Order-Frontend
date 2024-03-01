@@ -4,7 +4,7 @@ export const Cart = createContext(null);
 
 const Context = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [logedIn, setLogedIn] = useState(true);
+  const [logedIn, setLogedIn] = useState(false);
   return (
     <Cart.Provider value={{ cart, setCart, logedIn, setLogedIn }}>
       {children}
