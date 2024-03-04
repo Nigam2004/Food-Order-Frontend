@@ -1,8 +1,14 @@
 import React, { useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
-
+// import { NavLink, Outlet } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function Forget() {
   const [value, setValue] = useState();
+  const notify = (msg) => {
+    toast.success(`${msg}!`, {
+      position: "top-center",
+    });
+  };
   const fetchPost = async (data) => {
     try {
       const fetchData = await fetch(
@@ -17,6 +23,10 @@ export default function Forget() {
         }
       );
       const res = await fetchData.json();
+      if (res.result) {
+        notify(res.message);
+        setValue("");
+      }
       console.log(res);
     } catch (error) {
       console.log(error);
@@ -25,7 +35,10 @@ export default function Forget() {
   return (
     <>
       <div class="min-h-screen bg-gray-100 flex items-center justify-center font-poppins">
-        <div class="bg-white shadow-2xl rounded px-8 pt-6 pb-8 mb-4 max-w-md w-full shadow-orange-400 border-t-4 border-orange-500">
+        <div
+          class="bg-white shadow-2xl rounded px-8 pt-6 pb-8 mb-4 max-w-md w-full shadow-orange-400 border-t-4 border-orange-500"
+          data-aos="zoom-in"
+        >
           <h1 class="text-center text-2xl font-bold mb-6">Forgot Password</h1>
           <div>
             <div class="mb-4">
@@ -53,6 +66,7 @@ export default function Forget() {
             </button>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </>
   );

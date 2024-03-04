@@ -20,9 +20,9 @@ export default function Login() {
       const message = await result.json();
       if (message.login) {
         navigate("/");
+        setData({ email: "", password: "" });
         setLogedIn(message.login);
       }
-      setData({ email: "", password: "" });
     } catch (error) {
       console.log(error);
     }

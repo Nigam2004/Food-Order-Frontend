@@ -1,8 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import login from "../assets/Login.jpg";
-import { NavLink } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function SignUp() {
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+  const navigate = useNavigate();
+  const notify = () => {
+    toast.success(" Registered succesfully !", {
+      position: "top-center",
+    });
+  };
+  const signUpHandler = async (payload) => {
+    try {
+      const signUp = await fetch("http://localhost:4000/user/register", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      let res = await signUp.json();
+      if (res.result) {
+        notify();
+        setTimeout(() => {
+          navigate("/login");
+        }, 5000);
+      }
+
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <div className="min-h-screen rounded-md ">
@@ -33,6 +70,10 @@ export default function SignUp() {
                         id="firstName"
                         type="text"
                         placeholder="First Name"
+                        value={data.firstName}
+                        onChange={(e) => {
+                          setData({ ...data, firstName: e.target.value });
+                        }}
                       />
                     </div>
                     <div className="md:ml-2">
@@ -47,6 +88,10 @@ export default function SignUp() {
                         id="lastName"
                         type="text"
                         placeholder="Last Name"
+                        value={data.lastName}
+                        onChange={(e) => {
+                          setData({ ...data, lastName: e.target.value });
+                        }}
                       />
                     </div>
                   </div>
@@ -62,6 +107,10 @@ export default function SignUp() {
                       id="email"
                       type="email"
                       placeholder="Email"
+                      value={data.email}
+                      onChange={(e) => {
+                        setData({ ...data, email: e.target.value });
+                      }}
                     />
                   </div>
                   <div className="mb-4 md:flex md:justify-between">
@@ -77,6 +126,10 @@ export default function SignUp() {
                         id="password"
                         type="password"
                         placeholder="******************"
+                        value={data.password}
+                        onChange={(e) => {
+                          setData({ ...data, password: e.target.value });
+                        }}
                       />
                     </div>
                     <div className="md:ml-2">
@@ -91,6 +144,10 @@ export default function SignUp() {
                         id="c_password"
                         type="password"
                         placeholder="******************"
+                        value={data.confirmPassword}
+                        onChange={(e) => {
+                          setData({ ...data, confirmPassword: e.target.value });
+                        }}
                       />
                     </div>
                   </div>
@@ -98,32 +155,36 @@ export default function SignUp() {
                     <button
                       className="w-full px-4 py-2 font-bold text-white bg-orange-400 duration-300 rounded-full hover:bg-orange-700  focus:outline-none focus:shadow-outline"
                       type="button"
+                      onClick={() => {
+                        signUpHandler(data);
+                      }}
                     >
                       Register Account
                     </button>
                   </div>
                   <hr className="mb-6 border-t" />
                   <div className="text-center">
-                    <NavLink
-                      to="/forget"
+                    <Link
+                      to="/login/forget"
                       className="inline-block text-sm text-blue-500  align-baseline hover:text-blue-800"
                     >
                       Forgot Password?
-                    </NavLink>
+                    </Link>
                   </div>
                   <div className="text-center">
-                    <NavLink
+                    <Link
                       to="/login"
                       className="inline-block text-sm text-blue-500  align-baseline hover:text-blue-800"
                     >
                       Already have an account? Login!
-                    </NavLink>
+                    </Link>
                   </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </>
   );
