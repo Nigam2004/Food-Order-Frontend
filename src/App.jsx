@@ -11,6 +11,8 @@ import CartPage from "./pages/CartPage";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Forget from "./components/Forget";
+import Error from "./pages/Error";
+import Sucess from "./components/Sucess";
 import PrivateRoutes from "./utils/PrivateRoutes";
 
 function App() {
@@ -53,6 +55,22 @@ function App() {
               element={
                 <PrivateRoutes>
                   <CartPage />
+                </PrivateRoutes>
+              }
+            ></Route>
+            <Route
+              path="/*"
+              element={
+                <PrivateRoutes>
+                  <Error />
+                </PrivateRoutes>
+              }
+            ></Route>
+            <Route
+              path="/sucess"
+              element={
+                <PrivateRoutes>
+                  <Sucess />
                 </PrivateRoutes>
               }
             ></Route>
