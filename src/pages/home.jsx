@@ -26,12 +26,10 @@ function Home() {
           </h1>
           <p className=" text-[0.8rem] font-poppins font-bold mb-4 md:text-2xl lg:text-4xl">
             The Quick Bite Resturant 🍽️
-            <br /> & Enjoy The Food
           </p>
-          <p className=" text-[0.5rem] text left font-poppins mb-2 md:text-justify md:text-xl lg:text-2xl ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            non beatae, enim expedita natus molestias optio nobis dolor possimus
-            odio?
+          <p className=" text-[0.5rem] text left font-poppins font-medium mb-2 md:text-justify md:text-xl lg:text-2xl ">
+            Busy schedule? No problem! Quick Bite offers fresh, fast meals made
+            with love. Come Here or Order Online & Enjoy the Food 😋.
           </p>
           <Link to="/contactus">
             <CustumButtonFilled>Book Your Table</CustumButtonFilled>

@@ -7,22 +7,23 @@ const data = [
   {
     name: "Cheese Burger",
     img: img1,
-    review: " Lorem ipsum dolor sit amet consectetur adipisicing. ",
+    review: "Experience burger bliss! Quick Bite's legendary Cheese burger . ",
   },
   {
     name: "Chicken Biryani",
     img: img2,
-    review: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+    review: "Craving comfort? Try our flavorful Chicken Biryani.",
   },
   {
     name: "Kadhai Paneer",
     img: img3,
-    review: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+    review: "Don't miss our star dish! Kadhai Paneer.",
   },
   {
     name: "Paneer Tikka",
     img: img4,
-    review: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+    review:
+      "Try our sizzling Paneer Tikka! Marinated cheese grilled to perfection.",
   },
 ];
 
