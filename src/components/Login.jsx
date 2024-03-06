@@ -17,11 +17,12 @@ export default function Login() {
         },
         body: JSON.stringify(payload),
       });
-      const message = await result.json();
-      if (message.login) {
+      const res = await result.json();
+      if (res.login) {
         navigate("/");
         setData({ email: "", password: "" });
-        setLogedIn(message.login);
+        setLogedIn(res.login);
+        sessionStorage.setItem("token", JSON.stringify(res.token));
       }
     } catch (error) {
       console.log(error);

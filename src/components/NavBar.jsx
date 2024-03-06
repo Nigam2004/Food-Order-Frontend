@@ -23,7 +23,9 @@ function NavBar() {
   ];
   return (
     <div className=" w-full min-w-60 fixed  flex justify-between items-center px-7 py-2 bg-white z-20">
-      <div className="font-poppins font-bold">Broccoli</div>
+      <div className="font-poppins font-bold text-2xl drop-shadow-2xl shadow-orange-500">
+        Quick Bite
+      </div>
 
       <ul
         className={`sm:flex pl-8 sm:pl-0 sm:items-center sm:pb-0  absolute  sm:static sm:gap-8 

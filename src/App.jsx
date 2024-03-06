@@ -58,14 +58,7 @@ function App() {
                 </PrivateRoutes>
               }
             ></Route>
-            <Route
-              path="/*"
-              element={
-                <PrivateRoutes>
-                  <Error />
-                </PrivateRoutes>
-              }
-            ></Route>
+            <Route path="/*" element={<Error />}></Route>
             <Route
               path="/sucess"
               element={

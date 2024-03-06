@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Itemcard from "../components/Itemcard";
 import {
   Container,
   CustomButtonOutline,
 } from "../Custume Compnent/CustumElememt";
 
-import { foods } from "../../MockData";
+// import { foods } from "../../MockData";
 
 function Menu() {
   const menus = [
@@ -15,17 +15,46 @@ function Menu() {
     { name: "Dinner" },
     { name: "Desert" },
   ];
+  const [items, setItems] = useState();
   const [clicked, setClicked] = useState("");
+  const [query, setQuery] = useState();
+  const fetchItem = async () => {
+    const token = sessionStorage.getItem("token");
+    try {
+      const res = await fetch("http://localhost:4000/food-order/find-all-item");
+      const data = await res.json();
+      setItems(data.result);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const findItem = async (query) => {
+    try {
+      const res = await fetch(
+        `http://localhost:4000/food-order/find-item/${query}`
+      );
+      let data = await res.json();
+      setItems(data.result);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchItem();
+  }, []);
 
   return (
     <Container>
-      <div className="md:flex justify-between items-center px-5 py-2 fixed sm:static bg-white flex-wrap">
+      <div className="md:flex justify-between items-center px-14 py-1 fixed sm:static bg-white flex-wrap z-10 ">
         <div className="flex justify-center ">
           <input
             type="text"
             placeholder="Search Here"
-            // value={searchMovie}
-            // onChange={(e) => setSearchMovie(e.target.value)}
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              findItem(e.target.value);
+            }}
             className="h-[35px] w-2/3 md:w-full  outline-none border-orange-400 border-2 rounded-md px-5 shadow-lg"
           />
         </div>
@@ -40,7 +69,7 @@ function Menu() {
                 id={index}
                 onClick={(e) => {
                   setClicked(e.target.id);
-                  fetchGet();
+                  findItem(item.name);
                 }}
               >
                 {item.name}
@@ -51,11 +80,11 @@ function Menu() {
       </div>
 
       <div
-        className="grid grid-rows-1 pt-36 sm:pt-24 md:pt-2
-        "
+        className="grid  md:grid-cols-4 md:gap-y-10 sm:grid-cols-2 grid-cols-1 px-14 md:py-5 pt-44"
+        data-aos="zoom-in"
       >
-        {foods.map((item, index) => {
-          return <Itemcard item={item} key={index}></Itemcard>;
+        {items?.map((item) => {
+          return <Itemcard item={item} key={item._id}></Itemcard>;
         })}
       </div>
     </Container>

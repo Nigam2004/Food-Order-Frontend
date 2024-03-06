@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { MdDelete } from "react-icons/md";
+import { Cart } from "../../Context";
 
-export default function CartItem({ food_name, imageUrl, price }) {
+export default function CartItem({ food_name, imageUrl, price, _id }) {
+  const { cart, setCart } = useContext(Cart);
   const [count, setCount] = useState(1);
   return (
     <>
@@ -19,7 +21,7 @@ export default function CartItem({ food_name, imageUrl, price }) {
           <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
             <div className="flex items-center border-gray-100">
               <span
-                className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"
+                className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-orange-500 hover:text-blue-50"
                 onClick={() => {
                   setCount(count - 1);
                 }}
@@ -35,7 +37,7 @@ export default function CartItem({ food_name, imageUrl, price }) {
                 {count}
               </div>
               <span
-                className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"
+                className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-orange-500 hover:text-blue-50"
                 onClick={() => {
                   setCount(count + 1);
                 }}
@@ -45,10 +47,16 @@ export default function CartItem({ food_name, imageUrl, price }) {
             </div>
             <div className="flex items-center space-x-4">
               <p className="text-lg font-semibold">{price * count} ₹</p>
-              <MdDelete
-                size="20"
-                className="text-red-700 cursor-pointer hover:text-black "
-              />
+              <span
+                onClick={() => {
+                  setCart(cart.filter((c) => c._id !== _id));
+                }}
+              >
+                <MdDelete
+                  size="20"
+                  className="text-red-700 cursor-pointer hover:text-black "
+                />
+              </span>
             </div>
           </div>
         </div>

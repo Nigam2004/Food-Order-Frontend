@@ -6,10 +6,10 @@ function Itemcard({ item }) {
   const { cart, setCart } = useContext(Cart);
 
   return (
-    <div className="bg-white text-black rounded-xl cursor-pointer duration-500 hover:shadow-xl min-w-60 sm:w-80">
-      <div className=" p-3 bg-[#eee8d7] rounded-lg flex justify-center items-center  ">
+    <div className="bg-white text-black rounded-xl border-b-4 border-orange-500 hover:shadow-orange-600 cursor-pointer  hover:shadow-2xl hover:scale-105 min-w-40 duration-300 ease-in-out sm:w-80">
+      <div className=" p-3 bg-[#eee8d7] rounded-lg  flex justify-center items-center  ">
         <img
-          src="https://res.cloudinary.com/dbgmzkuuh/image/upload/v1706888466/xukny7ro7pk6ubbnbmmq.avif"
+          src={item.imageUrl}
           alt="burger"
           className="h-44 w-44 rounded-full"
         />
@@ -28,7 +28,7 @@ function Itemcard({ item }) {
         {cart.includes(item) ? (
           <CustomButtonOutline
             onClick={() => {
-              setCart(cart.filter((c) => c.food_name !== item.food_name));
+              setCart(cart.filter((c) => c._id !== item._id));
             }}
           >
             Remove From cart

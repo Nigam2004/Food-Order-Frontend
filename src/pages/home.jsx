@@ -25,7 +25,7 @@ function Home() {
             Welcome to 🍔
           </h1>
           <p className=" text-[0.8rem] font-poppins font-bold mb-4 md:text-2xl lg:text-4xl">
-            The Broccoli Resturant 🍽️
+            The Quick Bite Resturant 🍽️
             <br /> & Enjoy The Food
           </p>
           <p className=" text-[0.5rem] text left font-poppins mb-2 md:text-justify md:text-xl lg:text-2xl ">
