@@ -20,8 +20,9 @@ export default function Chef() {
           </h1>
           <p className="text-xs md:text-lg lg:text-xl ">
             {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quos
-            alias ipsam tenetur, illum a!
+            Flavor in a flash! We serve delicious, made-to-order meals perfect
+            for busy schedules. Order online and we'll zip it right to your
+            door!
           </p>
           <div className="flex flex-wrap mt-3">
             <div className="w-1/2 mt-2 flex gap-2">

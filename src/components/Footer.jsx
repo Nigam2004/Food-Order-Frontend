@@ -6,17 +6,17 @@ export default function Footer() {
       <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8 font-poppins ">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <div className="text-teal-600 font-bold">Broccoli Resturant</div>
+            <div className="text-teal-600 font-bold">Quick Bite Resturant</div>
 
             <p className="mt-4 max-w-xs text-gray-500">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
-              cupiditate quae nam molestias.
+              Quick Bite: Delicious food on the go. Satisfy your cravings in
+              minutes!
             </p>
 
             <ul className="mt-8 flex gap-6 ">
               <li>
                 <a
-                  href="/"
+                  href="/*"
                   rel="noreferrer"
                   target="_blank"
                   className="text-orange-400 transition hover:opacity-75"
@@ -40,7 +40,7 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="/"
+                  href="/*"
                   rel="noreferrer"
                   target="_blank"
                   className="text-orange-400 transition hover:opacity-75"
@@ -64,7 +64,7 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="/"
+                  href="/*"
                   rel="noreferrer"
                   target="_blank"
                   className="text-orange-400 transition hover:opacity-75"
@@ -84,7 +84,7 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="/"
+                  href="/*"
                   rel="noreferrer"
                   target="_blank"
                   className="text-orange-400 transition hover:opacity-75"
@@ -115,7 +115,7 @@ export default function Footer() {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -125,7 +125,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -135,7 +135,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -145,7 +145,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -161,7 +161,7 @@ export default function Footer() {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -171,7 +171,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -181,7 +181,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -197,7 +197,7 @@ export default function Footer() {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -207,7 +207,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -217,7 +217,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -233,7 +233,7 @@ export default function Footer() {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -243,7 +243,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -253,7 +253,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}
@@ -263,7 +263,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/*"
                     className="text-orange-400 transition hover:opacity-75"
                   >
                     {" "}

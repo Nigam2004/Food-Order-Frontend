@@ -69,7 +69,7 @@ function App() {
             ></Route>
           </Routes>
         </Context>
-        {/* <Footer></Footer> */}
+        <Footer></Footer>
       </Router>
     </>
   );

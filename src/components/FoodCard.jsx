@@ -14,7 +14,7 @@ function FoodCard({ data }) {
         <p className="text-xs text-[#fdc868] font-bold font-poppins md:text-xl lg:text-2xl">
           {data.name}
         </p>
-        <p className="text-xs font-medium text-center font-poppins md:text-base lg:text-lg">
+        <p className="text-xs font-semibold text-center font-poppins md:text-base lg:text-lg">
           {data.review}{" "}
         </p>
       </div>
