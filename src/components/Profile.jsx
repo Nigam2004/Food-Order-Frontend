@@ -1,29 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Cart } from "../../Context";
 
-function Profile() {
+function Profile({ profile }) {
   const { logedIn, setLogedIn } = useContext(Cart);
   let [show, setShow] = useState(false);
-  const myData = async () => {
-    const token = sessionStorage.getItem("token");
-    console.log(token);
-    try {
-      const res = fetch("http://localhost:4000/user/mydata", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-      });
-      let data = await res.json();
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    myData();
-  }, []);
+  let fLetter = profile.firstName.split("")[0];
+  let sLetter = profile.lastName.split("")[0];
+
   return (
     <div className="relative">
       <div
@@ -32,7 +15,7 @@ function Profile() {
           setShow(!show);
         }}
       >
-        NB
+        {fLetter + sLetter}
       </div>
       {show && (
         <div

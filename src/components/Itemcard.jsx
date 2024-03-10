@@ -3,8 +3,11 @@ import { CustomButtonOutline } from "../Custume Compnent/CustumElememt";
 import { Cart } from "../../Context";
 
 function Itemcard({ item }) {
+  // console.log(item);
   const { cart, setCart } = useContext(Cart);
 
+  const isExist = cart.includes(item);
+  console.log(isExist);
   return (
     <div className="bg-white text-black rounded-xl border-b-4 border-orange-500 hover:shadow-orange-600 cursor-pointer  hover:shadow-2xl hover:scale-105 min-w-40 duration-300 ease-in-out sm:w-80">
       <div className=" p-3 bg-[#eee8d7] rounded-lg  flex justify-center items-center  ">
