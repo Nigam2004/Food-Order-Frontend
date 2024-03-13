@@ -16,7 +16,7 @@ function Menu() {
     { name: "Desert" },
   ];
   const [items, setItems] = useState();
-  const [clicked, setClicked] = useState("");
+  const [clicked, setClicked] = useState(null);
   const [query, setQuery] = useState();
   const fetchItem = async () => {
     const token = sessionStorage.getItem("token");
@@ -84,6 +84,8 @@ function Menu() {
         data-aos="zoom-in"
       >
         {items?.map((item) => {
+          let ans = items.includes(item);
+          console.log(ans);
           return <Itemcard item={item} key={item._id}></Itemcard>;
         })}
       </div>

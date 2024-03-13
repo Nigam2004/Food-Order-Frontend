@@ -1,12 +1,32 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Cart } from "../../Context";
 
-function Profile({ profile }) {
+function Profile() {
   const { logedIn, setLogedIn } = useContext(Cart);
   let [show, setShow] = useState(false);
-  let fLetter = profile.firstName.split("")[0];
-  let sLetter = profile.lastName.split("")[0];
+  const [profile, setProfile] = useState();
+  let fLetter = profile?.firstName.split("")[0];
+  let sLetter = profile?.lastName.split("")[0];
+  const token = JSON.parse(sessionStorage.getItem("token"));
+  const myData = async (token) => {
+    try {
+      const res = await fetch("http://localhost:4000/user/mydata", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      });
+      let { data } = await res.json();
+      setProfile(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  useEffect(() => {
+    myData(token);
+  }, []);
   return (
     <div className="relative">
       <div
@@ -26,6 +46,7 @@ function Profile({ profile }) {
           <button
             onClick={() => {
               setLogedIn(false);
+              sessionStorage.removeItem("token");
             }}
           >
             Logout

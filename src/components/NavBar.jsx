@@ -13,7 +13,7 @@ function NavBar() {
   const { cart, setCart } = useContext(Cart);
   const { logedIn, setLogedIn } = useContext(Cart);
   let [isOpen, setIsOpen] = useState(false);
-  const [profile, setProfile] = useState();
+
   const Links = [
     { name: "Home", path: "/", id: "1", display: "block" },
     { name: "Menu", path: "/menu", id: "2", display: "block" },
@@ -22,27 +22,7 @@ function NavBar() {
     { name: "Login", path: "/login", id: "5", display: "hidden" },
     { name: "SignUp", path: "/signup", id: "6", display: "hidden" },
   ];
-  const token = JSON.parse(sessionStorage.getItem("token"));
-  const myData = async (token) => {
-    // console.log(token);
-    try {
-      const res = await fetch("http://localhost:4000/user/mydata", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-      });
-      let { data } = await res.json();
-      // console.log(data);
-      setProfile(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    myData(token);
-  }, []);
+
   return (
     <div className=" w-full min-w-60 fixed  flex justify-between items-center px-7 py-2 bg-white z-20">
       <div className="font-poppins font-bold text-2xl drop-shadow-2xl shadow-orange-500">
@@ -89,7 +69,7 @@ function NavBar() {
         )}
 
         {logedIn ? (
-          <Profile profile={profile} />
+          <Profile />
         ) : (
           <div className="sm:flex gap-3 hidden">
             <Link to="/login">
