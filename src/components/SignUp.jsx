@@ -19,7 +19,7 @@ export default function SignUp() {
   };
   const signUpHandler = async (payload) => {
     try {
-      const signUp = await fetch("http://localhost:4000/user/register", {
+      const signUp = await fetch("http://localhost:5000/user/register", {
         method: "POST",
         headers: {
           Accept: "application/json",

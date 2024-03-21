@@ -9,7 +9,7 @@ export default function Login() {
 
   const loginHandler = async (payload) => {
     try {
-      const result = await fetch("http://localhost:4000/user/login", {
+      const result = await fetch("http://localhost:5000/user/login", {
         method: "POST",
         headers: {
           Accept: "application/json",

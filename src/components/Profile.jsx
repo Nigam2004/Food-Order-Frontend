@@ -10,7 +10,7 @@ function Profile() {
   const token = JSON.parse(sessionStorage.getItem("token"));
   const myData = async (token) => {
     try {
-      const res = await fetch("http://localhost:4000/user/mydata", {
+      const res = await fetch("http://localhost:5000/user/mydata", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
