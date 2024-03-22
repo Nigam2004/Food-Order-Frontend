@@ -14,6 +14,7 @@ import Forget from "./components/Forget";
 import Error from "./pages/Error";
 import Sucess from "./components/Sucess";
 import PrivateRoutes from "./utils/PrivateRoutes";
+import ResetPassword from "./pages/ResetPassword";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route exact path="/" element={<Home></Home>}></Route>
             <Route path="/login" exact element={<Login></Login>}></Route>
             <Route path="/login/forget" element={<Forget />}></Route>
+            <Route path="/:_id/:token" element={<ResetPassword />}></Route>
             <Route path="/signup" element={<SignUp></SignUp>}></Route>
             <Route
               path="/menu"
@@ -69,7 +71,7 @@ function App() {
             ></Route>
           </Routes>
         </Context>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </Router>
     </>
   );

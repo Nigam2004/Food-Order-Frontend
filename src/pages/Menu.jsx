@@ -21,7 +21,7 @@ function Menu() {
   const fetchItem = async () => {
     const token = sessionStorage.getItem("token");
     try {
-      const res = await fetch("http://localhost:4000/food-order/find-all-item");
+      const res = await fetch("http://localhost:5000/food-order/find-all-item");
       const data = await res.json();
       setItems(data.result);
     } catch (error) {
@@ -31,7 +31,7 @@ function Menu() {
   const findItem = async (query) => {
     try {
       const res = await fetch(
-        `http://localhost:4000/food-order/find-item/${query}`
+        `http://localhost:5000/food-order/find-item/${query}`
       );
       let data = await res.json();
       setItems(data.result);
