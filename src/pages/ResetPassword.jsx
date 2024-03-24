@@ -4,8 +4,29 @@ import { useParams } from "react-router-dom";
 
 function ResetPassword() {
   const [show, isShow] = useState({ password: false, ConfirmPassword: false });
-  let data = useParams();
-  console.log(data);
+  const [values, setValues] = useState({
+    newPassword: "",
+    confirmPassword: "",
+  });
+  let { token } = useParams();
+
+  let resetPasswordhandler = async (payload, bearerToken) => {
+    try {
+      let result = await fetch("http://localhost:5000/user/reset-password", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `bearer ${bearerToken}`,
+        },
+        body: JSON.stringify(payload),
+      });
+      let data = await result.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <Container>
       <div className="flex justify-center items-center bg-gray-100  min-h-[90vh]">
@@ -18,7 +39,7 @@ function ResetPassword() {
               Enter a new password below to change your password
             </p>
           </div>
-          <form action="" enctype="" method="POST">
+          <div>
             <div className="">
               <label
                 for="newPassword"
@@ -31,7 +52,11 @@ function ResetPassword() {
                   className="appearance-none border shadow rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type={`${show.password ? "text" : "password"}`}
                   placeholder="Password"
-                  name="Password"
+                  name="newPassword"
+                  value={values.newPassword}
+                  onChange={(e) =>
+                    setValues({ ...values, newPassword: e.target.value })
+                  }
                 />
                 <img
                   className="w-7 absolute top-[10%] right-2"
@@ -60,6 +85,10 @@ function ResetPassword() {
                   type={`${show.ConfirmPassword ? "text" : "password"}`}
                   placeholder="Confirm your password"
                   name=" ConfirmPassword"
+                  value={values.confirmPassword}
+                  onChange={(e) =>
+                    setValues({ ...values, confirmPassword: e.target.value })
+                  }
                 />
                 <img
                   className="w-7 absolute top-[10%] right-2"
@@ -76,12 +105,14 @@ function ResetPassword() {
               </div>
             </div>
             <button
-              type="submit"
               className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+              onClick={() => {
+                resetPasswordhandler(values, token);
+              }}
             >
               Change Password
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </Container>
