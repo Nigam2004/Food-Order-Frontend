@@ -4,6 +4,7 @@ import {
   Container,
   CustomButtonOutline,
 } from "../Custume Compnent/CustumElememt";
+import Footer from "../components/Footer";
 
 // import { foods } from "../../MockData";
 
@@ -89,6 +90,7 @@ function Menu() {
           return <Itemcard item={item} key={item._id}></Itemcard>;
         })}
       </div>
+      <Footer></Footer>
     </Container>
   );
 }

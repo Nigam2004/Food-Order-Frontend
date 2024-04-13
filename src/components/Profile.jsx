@@ -42,7 +42,7 @@ function Profile() {
           className="absolute   w-36 py-2 px-3 right-0 rounded shadow-md bg-white border-orange-500 border-b-4"
           data-aos="zoom-in"
         >
-          <h1>Nigam Bisoyi</h1>
+          <h1>{`${profile?.firstName} ${profile?.lastName}`}</h1>
           <button
             onClick={() => {
               setLogedIn(false);

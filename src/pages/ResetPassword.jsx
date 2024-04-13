@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { Container } from "../Custume Compnent/CustumElememt";
 import { useParams } from "react-router-dom";
-
+import { ToastContainer } from "react-toastify";
 function ResetPassword() {
   const [show, isShow] = useState({ password: false, ConfirmPassword: false });
   const [values, setValues] = useState({
     newPassword: "",
     confirmPassword: "",
   });
+  const notify = (data) => {
+    toast.success(`${data} !`, {
+      position: "top-center",
+    });
+  };
   let { token } = useParams();
 
   let resetPasswordhandler = async (payload, bearerToken) => {
@@ -22,7 +27,7 @@ function ResetPassword() {
         body: JSON.stringify(payload),
       });
       let data = await result.json();
-      console.log(data);
+      notify(data);
     } catch (error) {
       console.log(error);
     }

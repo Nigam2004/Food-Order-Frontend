@@ -12,6 +12,7 @@ import {
   Container,
   CustumButtonFilled,
 } from "../Custume Compnent/CustumElememt";
+import Footer from "../components/Footer";
 
 function Home() {
   useEffect(() => {
@@ -58,6 +59,7 @@ function Home() {
         </Carousel>
       </div>
       <Chef></Chef>
+      <Footer></Footer>
     </Container>
   );
 }
